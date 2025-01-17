@@ -380,6 +380,7 @@ namespace Sequence.EmbeddedWallet
             }
             catch (Exception e)
             {
+                Debug.LogException(e);
                 if (e.Message.Contains(EmailInUseError))
                 {
                     List<LoginMethod> associatedLoginMethods = ParseLoginMethods(e.Message);
